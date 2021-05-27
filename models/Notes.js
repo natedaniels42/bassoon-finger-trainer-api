@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 
 const NoteSchema = mongoose.Schema({
-    notes: [{
-        name: {
-            type: String,
-            required: true,
-        },
-        images: [{
-            type: String,
-            required: true,
-        }]
+    name: {
+        type: String,
+        required: true,
+    },
+    images: [{
+        type: String,
+        required: true,
     }]
 });
 
