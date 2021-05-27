@@ -6,7 +6,7 @@ const fingeringSchema = new Schema({
         type: String,
         required: true
     },
-    keys: [[]],
+    keys: [[String]],
 })
 
 const Fingering = mongoose.model('Fingering', fingeringSchema);
