@@ -8,6 +8,15 @@ const index = (req, res) => {
     })
 };
 
+const show = (req, res) => {
+    db.Fingering.findById(req.params.id, (err, foundFingering) => {
+        if (err) console.log(err);
+
+        res.status(200).json(foundFingering);
+    })
+}
+
 module.exports = {
     index,
+    show,
 }
