@@ -19,3 +19,4 @@ db.Fingering.deleteMany({}, (err, deletedFingerings) => {
         process.exit();
     })
 })
+
