@@ -8,6 +8,15 @@ const index = (req, res) => {
     })
 }
 
+const show = (req, res) => {
+    db.Note.findById(req.params.id, (err, foundNote) => {
+        if (err) console.log(err);
+
+        res.status(200).send(foundNote);
+    })
+}
+
 module.exports = {
     index,
+    show,
 }
