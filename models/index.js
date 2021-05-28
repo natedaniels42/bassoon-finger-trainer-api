@@ -16,4 +16,5 @@ mongoose.connect(connectionString, configOptions)
 module.exports = {
     Note: require('./Notes'),
     Fingering: require('./Fingerings'),
+    Bassoon: require('./Bassoon'),
 };
