@@ -3,5 +3,6 @@ const ctrl = require('../controllers');
 
 router.get('/', ctrl.fingerings.index);
 router.get('/:id', ctrl.fingerings.show);
+router.get('/name/:name', ctrl.fingerings.getByName);
 
 module.exports = router;
