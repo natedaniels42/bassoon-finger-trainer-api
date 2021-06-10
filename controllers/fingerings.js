@@ -17,7 +17,7 @@ const show = (req, res) => {
 }
 
 const getByName = (req, res) => {
-    db.Fingering.find({name: req.params.name}, (err, foundFingering) => {
+    db.Fingering.findOne({name: req.params.name}, (err, foundFingering) => {
         if (err) console.log(err);
 
         res.status(200).json(foundFingering);
