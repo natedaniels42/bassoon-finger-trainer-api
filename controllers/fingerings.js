@@ -24,8 +24,17 @@ const getByName = (req, res) => {
     })
 }
 
+const getRandom = (req, res) => {
+    db.Fingering.aggregate([{ $sample: { size: 10 }}], (err, foundFingerings) => {
+        if (err) console.log(err);
+
+        res.status(200).json(foundFingerings);
+    })
+}
+
 module.exports = {
     index,
     show,
     getByName,
+    getRandom
 }
